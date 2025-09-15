@@ -1,0 +1,84 @@
+body {
+  background: radial-gradient(circle, #23243a 0%, #141425 100%);
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#game-container {
+  position: relative;
+  width: 900px;
+  max-width: 98vw;
+}
+
+#pongCanvas {
+  background: linear-gradient(135deg, #18182b 0%, #222245 100%);
+  display: block;
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px #0008, 0 1px 0 #fff1 inset;
+  border: 2px solid #fff3;
+  transition: box-shadow 0.2s;
+}
+
+#scoreboard {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-top: 18px;
+  font-weight: bold;
+  letter-spacing: 8px;
+  user-select: none;
+}
+
+.score {
+  transition: color 0.15s, transform 0.15s;
+  color: #92c7ff;
+  text-shadow: 0 2px 16px #0008, 0 0px 0 #fff2;
+}
+
+.score.bump {
+  color: #fbc02d;
+  transform: scale(1.18);
+}
+
+.colon {
+  color: #fff9;
+}
+
+#instructions {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 8px;
+  color: #b3c6e1;
+  letter-spacing: 2px;
+  user-select: none;
+}
+
+#winMessage {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(120deg, #2e3a7b 60%, #4887f7 100%);
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: bold;
+  border-radius: 16px;
+  padding: 36px 48px;
+  box-shadow: 0 6px 32px #0009;
+  z-index: 10;
+  text-align: center;
+  letter-spacing: 2px;
+  border: 3px solid #fff6;
+  animation: popwin 0.4s ease;
+}
+
+@keyframes popwin {
+  0% {transform: translate(-50%, -50%) scale(0.7);}
+  75% {transform: translate(-50%, -50%) scale(1.12);}
+  100% {transform: translate(-50%, -50%) scale(1);}
+}
